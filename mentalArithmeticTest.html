@@ -39,14 +39,14 @@
 
 <script>
     /**
-     * Возвращает случайное число
+     * Возвращает случайное числоMath.random()
      * в диапазоне [min, max]
      * @param {number} min
      * @param {number} max
      * @return {number} randomInt
      */
   getRandomInt = function(min, max) {
-    var randomInt = min + Math.floor(Math.random() *
+    var randomInt = min + Math.floor(0.5 *
                     (max - min + 1));
     return randomInt;
   };
