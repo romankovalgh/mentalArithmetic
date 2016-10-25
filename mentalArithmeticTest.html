@@ -1,0 +1,63 @@
+<html>
+<head></head>
+
+<body>
+<script>
+
+(function() {
+  var answerInt, answerText, expressionExample1, expressionExample2, getRandomInt, createSummands, checkAnswerUser, StringToNumber, answerUserSum;
+
+  getRandomInt = function(min, max) {
+    return min + Math.floor(Math.random() * (max - min + 1));
+  };
+
+  createSummands = function() {
+	expressionExample1 = getRandomInt(1, 100);
+    expressionExample2 = 8;
+  }  
+  
+  answerUserSum = function() {
+    var innerAnswerText;
+	innerAnswerText = prompt(expressionExample1 + ' + ' + expressionExample2 + ' = ', '');
+	return innerAnswerText;
+  }
+  
+  StringToNumber = function(innerString) {
+	return +innerString;
+  }
+  
+  checkAnswerUser = function(firstNumber, secondNumber) {
+	if (firstNumber === secondNumber) {
+      ruturn true;
+    } else {
+      return false;
+    }
+  }
+  
+  outputResult = function(isCorrectAnswer) {
+    if (checkAnswerUser(isCorrectAnswer, expressionExample1 + expressionExample2)) {
+      alert("Правильно!");
+    } else {
+      alert("Не правильно!");
+    }
+  }
+  
+  
+  createSummands();
+  
+  answerText = answerUserSum();
+
+  answerInt = StringToNumber(answerText);
+  
+  outputResult(answerInt);
+
+  alert(expressionExample1 + expressionExample2);
+
+  
+
+}).call(this);
+
+
+</script>
+</body>
+</html>
