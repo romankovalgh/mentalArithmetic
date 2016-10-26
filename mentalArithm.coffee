@@ -79,7 +79,7 @@ checkAnswerUser = (firstNumber, secondNumber) ->
 
 ###*
 # Если числа равны -
-# выводит сообщение об этоь
+# выводит сообщение об этом
 # @param {boolean} isCorrectAnswer=true если числа равны
 ###
 
@@ -93,11 +93,12 @@ outputResult = (isCorrectAnswer) ->
 
   
 #CheckEndScript = false;    
-#while 
-createSummands()
-answerUserText = answerUserSum()
-answerUserInt = StringToNumber(answerUserText)
-outputResult answerUserInt
+#
+while true
+  createSummands()
+  answerUserText = answerUserSum()
+  answerUserInt = StringToNumber(answerUserText)
+  outputResult answerUserInt
 
 
 

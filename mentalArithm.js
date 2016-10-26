@@ -111,7 +111,7 @@
 
   /**
    * Если числа равны -
-   * выводит сообщение об этоь
+   * выводит сообщение об этом
    * @param {boolean} isCorrectAnswer=true если числа равны
    */
 
@@ -126,12 +126,11 @@
     }
   };
 
-  createSummands();
-
-  answerUserText = answerUserSum();
-
-  answerUserInt = StringToNumber(answerUserText);
-
-  outputResult(answerUserInt);
+  while (true) {
+    createSummands();
+    answerUserText = answerUserSum();
+    answerUserInt = StringToNumber(answerUserText);
+    outputResult(answerUserInt);
+  }
 
 }).call(this);
