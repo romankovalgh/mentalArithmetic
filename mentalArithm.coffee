@@ -76,8 +76,8 @@ outputResult = (isCorrectAnswer) ->
     alert 'Правильно!'
   else
     alert 'Не правильно!'
-	alert 'Правильно: ' + expressionExample1 + expressionExample2
-  
+    alert 'Правильно: ' + expressionExample1 + expressionExample2
+ 
 
 createSummands()
 answerUserText = answerUserSum()

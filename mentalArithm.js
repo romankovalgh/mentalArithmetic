@@ -100,11 +100,10 @@
     if (checkAnswerUser(isCorrectAnswer, expressionExample1 + expressionExample2)) {
       return alert('Правильно!');
     } else {
-      return alert('Не правильно!');
+      alert('Не правильно!');
+      return alert('Правильно: ' + expressionExample1 + expressionExample2);
     }
   };
-
-  alert('Правильно: ' + expressionExample1 + expressionExample2);
 
   createSummands();
 
