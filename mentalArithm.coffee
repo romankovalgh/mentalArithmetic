@@ -27,9 +27,9 @@ getRandomInt = (min, max) ->
 # Создает два случайных числа-слагаемые
 ###
 
-createSummands = ->
+createSummands = (secondSummand = 7) ->
   expressionExample1 = getRandomInt(1, 100)
-  expressionExample2 = 8
+  expressionExample2 = secondSummand
   
 
 ###*
@@ -45,7 +45,7 @@ answerUserSum = ->
   userAnswerText = prompt(expressionExample1 + ' + ' + expressionExample2 + ' = ', '')
   
   if userAnswerText in ['e', 'end', 'у'] then die()
-  #changeSecondExample = 
+    
   userAnswerText
 
 ###*
@@ -87,8 +87,11 @@ outputResult = (isCorrectAnswer) ->
   
 
 while true
-  createSummands()
+  createSummands(SummandN2)
   answerUserText = answerUserSum()
+  if answerUserText in ['2d', '2в']
+    SummandN2 = +prompt('Enter the second number: ', '7')  
+    continue
   answerUserInt = StringToNumber(answerUserText)
   outputResult answerUserInt
 
