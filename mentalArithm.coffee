@@ -10,14 +10,6 @@ answerUserSum = undefined
 outputResult = undefined
 
 
-###*
-# проверяет не ввел ли пользователь 'e' или 'end'
-# символ конца программы
-# @returns {boolean} true - конец программы
-###
-
-CheckEndScript = (whatUserEnter) ->
-  if whatUserEnter in ['e', 'end'] then true else false
 
 ###*
 # Возвращает случайное числоMath.random()
@@ -51,8 +43,9 @@ createSummands = ->
 answerUserSum = ->
   userAnswerText = undefined
   userAnswerText = prompt(expressionExample1 + ' + ' + expressionExample2 + ' = ', '')
-  checkEnd = CheckEndScript userAnswerText 
-  if checkEnd then die()
+  
+  if userAnswerText in ['e', 'end', 'у'] then die()
+  #changeSecondExample = 
   userAnswerText
 
 ###*
@@ -92,8 +85,7 @@ outputResult = (isCorrectAnswer) ->
 
 
   
-#CheckEndScript = false;    
-#
+
 while true
   createSummands()
   answerUserText = answerUserSum()
