@@ -41,7 +41,7 @@
 
   getRandomInt = function(min, max) {
     var randomInt;
-    return randomInt = min + Math.floor(0.5 * (max - min + 1));
+    return randomInt = min + Math.floor(Math.random() * (max - min + 1));
   };
 
 
@@ -124,6 +124,7 @@
   outputResult(answerUserInt);
 
 }).call(this);
+
 
 
 </script>

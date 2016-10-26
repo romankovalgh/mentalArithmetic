@@ -9,6 +9,16 @@ StringToNumber = undefined
 answerUserSum = undefined
 outputResult = undefined
 
+
+###*
+# проверяет не ввел ли пользователь 'e' или 'end'
+# символ конца программы
+# @returns {boolean} true - конец программы
+###
+
+CheckEndScript = (whatUserEnter) ->
+  if whatUserEnter in ['e', 'end'] then true else false
+
 ###*
 # Возвращает случайное числоMath.random()
 # в диапазоне [min, max]
@@ -18,7 +28,7 @@ outputResult = undefined
 ###
 
 getRandomInt = (min, max) ->
-  randomInt = min + Math.floor(0.5 * (max - min + 1))
+  randomInt = min + Math.floor(Math.random() * (max - min + 1))
   
 
 ###*
@@ -41,6 +51,8 @@ createSummands = ->
 answerUserSum = ->
   userAnswerText = undefined
   userAnswerText = prompt(expressionExample1 + ' + ' + expressionExample2 + ' = ', '')
+  checkEnd = CheckEndScript userAnswerText 
+  if checkEnd die()
   userAnswerText
 
 ###*
@@ -77,11 +89,15 @@ outputResult = (isCorrectAnswer) ->
   else
     alert 'Не правильно!'
     temp = expressionExample1 + expressionExample2; alert 'Правильно: ' + temp
- 
 
+
+  
+#CheckEndScript = false;    
+#while 
 createSummands()
 answerUserText = answerUserSum()
 answerUserInt = StringToNumber(answerUserText)
 outputResult answerUserInt
+
 
 
