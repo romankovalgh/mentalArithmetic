@@ -52,7 +52,7 @@ answerUserSum = ->
   userAnswerText = undefined
   userAnswerText = prompt(expressionExample1 + ' + ' + expressionExample2 + ' = ', '')
   checkEnd = CheckEndScript userAnswerText 
-  if checkEnd die()
+  if checkEnd then die()
   userAnswerText
 
 ###*

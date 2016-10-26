@@ -24,6 +24,21 @@
 
 
   /**
+   * проверяет не ввел ли пользователь 'e' или 'end'
+   * символ конца программы
+   * @returns {boolean} true - конец программы
+   */
+
+  CheckEndScript = function(whatUserEnter) {
+    if (whatUserEnter === 'e' || whatUserEnter === 'end') {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+
+  /**
    * Возвращает случайное числоMath.random()
    * в диапазоне [min, max]
    * @param {number} min
@@ -56,9 +71,13 @@
    */
 
   answerUserSum = function() {
-    var userAnswerText;
+    var checkEnd, userAnswerText;
     userAnswerText = void 0;
     userAnswerText = prompt(expressionExample1 + ' + ' + expressionExample2 + ' = ', '');
+    checkEnd = CheckEndScript(userAnswerText);
+    if (checkEnd) {
+      die();
+    }
     return userAnswerText;
   };
 
@@ -104,22 +123,6 @@
       alert('Не правильно!');
       temp = expressionExample1 + expressionExample2;
       return alert('Правильно: ' + temp);
-    }
-  };
-
-
-  /**
-   * проверяет не ввел ли пользователь 'e' -
-   * символ конца программы
-   * # @returns {string} userAnswerText возвращает то,
-   * что ввел пользователь
-   */
-
-  CheckEndScript = function(whatUserEnter) {
-    if (whatUserEnter === 'e' || whatUserEnter === 'end') {
-      return true;
-    } else {
-      return false;
     }
   };
 
