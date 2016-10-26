@@ -97,11 +97,13 @@
    */
 
   outputResult = function(isCorrectAnswer) {
+    var temp;
     if (checkAnswerUser(isCorrectAnswer, expressionExample1 + expressionExample2)) {
       return alert('Правильно!');
     } else {
       alert('Не правильно!');
-      return alert('Правильно: ' + expressionExample1 + expressionExample2);
+      temp = expressionExample1 + expressionExample2;
+      return alert('Правильно: ' + temp);
     }
   };
 

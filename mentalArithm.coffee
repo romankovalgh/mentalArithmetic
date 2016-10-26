@@ -60,7 +60,7 @@ StringToNumber = (innerString) ->
 ###
 
 checkAnswerUser = (firstNumber, secondNumber) ->
-  if firstNumber == secondNumber
+  if firstNumber is secondNumber
     true
   else
     false
@@ -76,8 +76,7 @@ outputResult = (isCorrectAnswer) ->
     alert 'Правильно!'
   else
     alert 'Не правильно!'
-	temp = expressionExample1 + expressionExample2
-    alert 'Правильно: ' + temp
+    temp = expressionExample1 + expressionExample2; alert 'Правильно: ' + temp
  
 
 createSummands()
