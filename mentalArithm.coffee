@@ -28,7 +28,7 @@ getRandomInt = (min, max) ->
 createSummands = ->
   expressionExample1 = getRandomInt(1, 100)
   expressionExample2 = 8
-  return
+  
 
 ###*
 # Выводит в диалоговом окне два слагаемых
@@ -77,7 +77,7 @@ outputResult = (isCorrectAnswer) ->
   else
     alert 'Не правильно!'
 	alert 'Правильно: ' + expressionExample1 + expressionExample2
-  return
+  
 
 createSummands()
 answerUserText = answerUserSum()
